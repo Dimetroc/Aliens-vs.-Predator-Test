@@ -2,11 +2,14 @@
 
 public class NightVisionCamera : VisionCamera {
 
-    private const VisionModes VISIONMODE = VisionModes.Night;
-
-    protected override void OnVisionModeChanged(VisionModes newVisionMode)
+    protected override VisionModes VisionMode
     {
-        base.OnVisionModeChanged(newVisionMode);
-        if (newVisionMode == VISIONMODE) Debug.Log("I am is on: " + name);
+        get { return VisionModes.Night; }
+    }
+
+    protected override void Init()
+    {
+        base.Init();
+        SwitchCameraOff();
     }
 }
