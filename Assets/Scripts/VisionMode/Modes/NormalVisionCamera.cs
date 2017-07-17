@@ -11,7 +11,6 @@ public class NormalVisionCamera : VisionCamera {
     {
         if (newVisionMode == VisionModes.Combined || newVisionMode == VisionMode)
         {
-            Debug.Log("I am is on: " + name);
             SwitchCameraOn();
         }
         else

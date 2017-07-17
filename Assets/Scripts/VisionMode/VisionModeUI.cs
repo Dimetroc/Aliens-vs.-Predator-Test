@@ -10,7 +10,7 @@ public class VisionModeUI : MonoBehaviour {
 
     private void SignUpForVisionModeSwitch()
     {
-        //There are has to be a VisionModeSwitcher component in the scene
+        //There has to be a VisionModeSwitcher component in the scene
         var modeSwitcher = FindObjectOfType<VisionModeSwitcher>();
         modeSwitcher.VisionModeChanged += OnVisionModeChanged;
     }
